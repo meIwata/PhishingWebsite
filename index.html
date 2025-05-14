@@ -5,32 +5,86 @@
     <title>Starbucks Taiwan</title>
 </head>
 <style>
-    header{
+    html, body {
+        font-family: "Noto Sans TC", Meiryo, 微軟正黑體, "Microsoft JhengHei", sans-serif;
+    }
+
+    .nav {
         background-color: #006341;
         height: 10px;
     }
-    nav{
+
+    header .header_container {
         padding: 1.5rem 0;
         text-align: left;
+        background-color: #f7f7f7;
+        display: flex;
     }
-    .logo{
+
+    .header_container {
+
+    }
+
+    .logo {
         cursor: pointer;
         line-height: 1em;
     }
-    .starbucks_logo{
+
+    .starbucks_logo {
         width: 62px;
+        margin-left: 20px;
+
+    }
+
+    .display {
+        display: inline-block;
+        margin-left: 2.6rem;
+
+    }
+
+    .display ul {
+        display: flex;
+    }
+
+    .display ul, ol {
+        list-style: none;
+    }
+
+    .bar-list {
+        /*background: transparent;*/
+        text-decoration: none;
+        cursor: pointer;
+        line-height: 1em;
+        display: inline-block;
+        padding: 1.4em 1em 1.2em;
+        font-size: 15px;
+        font-weight: 400;
+        letter-spacing: .1em;
     }
 </style>
 <body>
-<header>
 <!--    https://myotgcard.starbucks.com.tw/StarbucksMemberWebsite/SignIn.html-->
-    <nav class="navbar">
+<header>
+    <div class="nav"></div>
+    <div class="header_container">
         <div class="logo">
             <img class="starbucks_logo" src="https://www.starbucks.com.tw/objects/images/logo.png" alt="logo">
         </div>
-        <div class="display"></div>
+        <div class="display">
+            <ul>
+                <li class="bar-list">咖啡</li>
+                <li class="bar-list">商品</li>
+                <li class="bar-list">門市</li>
+                <li class="bar-list">星禮程</li>
+                <li class="bar-list">第四生活空間</li>
+                <li class="bar-list">送禮專區</li>
+                <li class="bar-list">線上門市</li>
+            </ul>
+        </div>
         <div class="utility"></div>
-    </nav>
+    </div>
+
+
 </header>
 
 </body>
