@@ -19,48 +19,105 @@
         text-align: left;
         background-color: #f7f7f7;
         display: flex;
+
+        height: 45px;
+
+
+        .logo {
+            cursor: pointer;
+            line-height: 1em;
+            margin-left: 100px;
+            display: flex;
+            align-items: center;
+        }
+
+        .starbucks_logo {
+            width: 62px;
+            margin-left: 20px;
+        }
+
+        .display {
+            display: inline-block;
+            margin-left: 0;
+        }
+
+        .display ul {
+            display: flex;
+        }
+
+        .display ul, ol {
+            list-style: none;
+        }
+
+        .bar-list {
+            /*background: transparent;*/
+            text-decoration: none;
+            cursor: pointer;
+            line-height: 1em;
+            display: inline-block;
+            padding: 1.4em 1em 1.2em;
+            font-size: 15px;
+            font-weight: 400;
+            letter-spacing: .1em;
+        }
+
+        /* 滑鼠懸停時背景反黑 */
+
+        .bar-list:hover {
+            background-color: #000; /* 黑色背景 */
+            color: #fff; /* 改變文字顏色為白色以提高對比 */
+        }
+
+        .utility_list {
+            top: 0;
+            right: 20px;
+            position: absolute;
+            text-decoration: none;
+            cursor: pointer;
+            line-height: 1em;
+            display: inline-block;
+            padding: 1.4em 1em 1.2em;
+            font-size: 15px;
+            font-weight: 400;
+            letter-spacing: .1em;
+        }
+
+        .utility_list ul {
+            flex-direction: row;
+            display: flex;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            padding-inline-start: 40px;
+            unicode-bidi: isolate;
+        }
+
+        .utility_list ul li {
+            list-style: none;
+            margin: 0 10px; /* 左右間距各 10px */
+            display: flex;
+            align-items: center;
+            gap: 2.5px;
+            cursor: pointer;
+        }
+        .utility_list li svg {
+            width: 24px; /* 圖標大小 */
+            height: 24px;
+            stroke: currentColor; /* 使用文字顏色 */
+            transition: stroke 0.3s ease;
+        }
+
+        .utility_list li:hover {
+            color: gray; /* 字體變灰色 */
+        }
+
+        .utility_list li:hover svg {
+            stroke: gray; /* 圖標變灰色 */
+        }
+    }
+    .size-6{
+        width: 28px;
     }
 
-    .header_container {
-
-    }
-
-    .logo {
-        cursor: pointer;
-        line-height: 1em;
-    }
-
-    .starbucks_logo {
-        width: 62px;
-        margin-left: 20px;
-
-    }
-
-    .display {
-        display: inline-block;
-        margin-left: 2.6rem;
-
-    }
-
-    .display ul {
-        display: flex;
-    }
-
-    .display ul, ol {
-        list-style: none;
-    }
-
-    .bar-list {
-        /*background: transparent;*/
-        text-decoration: none;
-        cursor: pointer;
-        line-height: 1em;
-        display: inline-block;
-        padding: 1.4em 1em 1.2em;
-        font-size: 15px;
-        font-weight: 400;
-        letter-spacing: .1em;
-    }
 </style>
 <body>
 <!--    https://myotgcard.starbucks.com.tw/StarbucksMemberWebsite/SignIn.html-->
@@ -81,7 +138,24 @@
                 <li class="bar-list">線上門市</li>
             </ul>
         </div>
-        <div class="utility"></div>
+        <div class="utility_list">
+            <ul>
+                <li class="recruit">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M18 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0ZM3 19.235v-.11a6.375 6.375 0 0 1 12.75 0v.109A12.318 12.318 0 0 1 9.374 21c-2.331 0-4.512-.645-6.374-1.766Z" />
+                    </svg>
+                    <span>招募夥伴</span>
+                </li>
+                <li class="store for-pc">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+                    </svg>
+
+                    <span>門市查詢</span>
+                </li>
+            </ul>
+        </div>
     </div>
 
 
