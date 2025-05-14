@@ -21,101 +21,160 @@
         display: flex;
 
         height: 45px;
-
-
-        .logo {
-            cursor: pointer;
-            line-height: 1em;
-            margin-left: 100px;
-            display: flex;
-            align-items: center;
-        }
-
-        .starbucks_logo {
-            width: 62px;
-            margin-left: 20px;
-        }
-
-        .display {
-            display: inline-block;
-            margin-left: 0;
-        }
-
-        .display ul {
-            display: flex;
-        }
-
-        .display ul, ol {
-            list-style: none;
-        }
-
-        .bar-list {
-            /*background: transparent;*/
-            text-decoration: none;
-            cursor: pointer;
-            line-height: 1em;
-            display: inline-block;
-            padding: 1.4em 1em 1.2em;
-            font-size: 15px;
-            font-weight: 400;
-            letter-spacing: .1em;
-        }
-
-        /* 滑鼠懸停時背景反黑 */
-
-        .bar-list:hover {
-            background-color: #000; /* 黑色背景 */
-            color: #fff; /* 改變文字顏色為白色以提高對比 */
-        }
-
-        .utility_list {
-            top: 0;
-            right: 20px;
-            position: absolute;
-            text-decoration: none;
-            cursor: pointer;
-            line-height: 1em;
-            display: inline-block;
-            padding: 1.4em 1em 1.2em;
-            font-size: 15px;
-            font-weight: 400;
-            letter-spacing: .1em;
-        }
-
-        .utility_list ul {
-            flex-direction: row;
-            display: flex;
-            margin-block-start: 1em;
-            margin-block-end: 1em;
-            padding-inline-start: 40px;
-            unicode-bidi: isolate;
-        }
-
-        .utility_list ul li {
-            list-style: none;
-            margin: 0 10px; /* 左右間距各 10px */
-            display: flex;
-            align-items: center;
-            gap: 2.5px;
-            cursor: pointer;
-        }
-        .utility_list li svg {
-            width: 24px; /* 圖標大小 */
-            height: 24px;
-            stroke: currentColor; /* 使用文字顏色 */
-            transition: stroke 0.3s ease;
-        }
-
-        .utility_list li:hover {
-            color: gray; /* 字體變灰色 */
-        }
-
-        .utility_list li:hover svg {
-            stroke: gray; /* 圖標變灰色 */
-        }
     }
-    .size-6{
+
+    .logo {
+        cursor: pointer;
+        line-height: 1em;
+        margin-left: 100px;
+        display: flex;
+        align-items: center;
+    }
+
+    .starbucks_logo {
+        width: 62px;
+        margin-left: 20px;
+    }
+
+    .display {
+        display: inline-block;
+        margin-left: 0;
+    }
+
+    .display ul {
+        display: flex;
+    }
+
+    .display ul, ol {
+        list-style: none;
+    }
+
+    .bar-list {
+        /*background: transparent;*/
+        text-decoration: none;
+        cursor: pointer;
+        line-height: 1em;
+        display: inline-block;
+        padding: 1.4em 1em 1.2em;
+        font-size: 15px;
+        font-weight: 400;
+        letter-spacing: .1em;
+    }
+
+    /* 滑鼠懸停時背景反黑 */
+
+    .bar-list:hover {
+        background-color: #000; /* 黑色背景 */
+        color: #fff; /* 改變文字顏色為白色以提高對比 */
+    }
+
+    .utility_list {
+        top: 0;
+        right: 20px;
+        position: absolute;
+        text-decoration: none;
+        cursor: pointer;
+        line-height: 1em;
+        display: inline-block;
+        padding: 1.4em 1em 1.2em;
+        font-size: 15px;
+        font-weight: 400;
+        letter-spacing: .1em;
+    }
+
+    .utility_list ul {
+        flex-direction: row;
+        display: flex;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        padding-inline-start: 40px;
+        unicode-bidi: isolate;
+    }
+
+    .utility_list ul li {
+        list-style: none;
+        margin: 0 10px; /* 左右間距各 10px */
+        display: flex;
+        align-items: center;
+        gap: 2.5px;
+        cursor: pointer;
+    }
+
+    .utility_list li svg {
+        width: 24px; /* 圖標大小 */
+        height: 24px;
+        stroke: currentColor; /* 使用文字顏色 */
+        transition: stroke 0.3s ease;
+    }
+
+    .utility_list li:hover {
+        color: gray; /* 字體變灰色 */
+    }
+
+    .utility_list li:hover svg {
+        stroke: gray; /* 圖標變灰色 */
+    }
+
+    .size-6 {
         width: 28px;
+    }
+
+    /*--------------------- form ---------------------*/
+
+    form {
+        margin: 0;
+        font-weight: normal;
+        line-height: 1.2em;
+        display: block;
+        unicode-bidi: isolate;
+    }
+
+    #content.container {
+        max-width: 1280px;
+        margin: 32px auto 0px;
+    }
+    #content {
+        font-family: 'Noto Sans TC', 'Lato', 'Open Sans', 'Arial', sans-serif;
+        -webkit-text-size-adjust: 100%;
+        font-size: 14px;
+        line-height: 1.7em;
+        width: 95%;
+        padding: 0 20px;
+        position: relative;
+    }
+    #content .max1024 {
+        max-width: 1024px;
+        margin: 0px auto;
+    }
+
+    #content .fields {
+        clear: both;
+    }
+    #content .size1of1 {
+        float: none;
+    }
+    #content .region {
+        position: relative;
+        padding: 0 8px;
+    }
+    #content .blocks-two-up {
+        flex-direction: row;
+    }
+    #content .blocks-two-up {
+        display: flex;
+        gap: 48px;
+    }
+    #content .section_blocks {
+        margin-bottom: 1em;
+        line-height: 1.357143;
+    }
+    #content .blocks {
+        clear: both;
+        margin-left: -16px;
+        list-style: none;
+    }
+    #content li {
+        margin-bottom: .857143em;
     }
 
 </style>
@@ -141,15 +200,19 @@
         <div class="utility_list">
             <ul>
                 <li class="recruit">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M18 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0ZM3 19.235v-.11a6.375 6.375 0 0 1 12.75 0v.109A12.318 12.318 0 0 1 9.374 21c-2.331 0-4.512-.645-6.374-1.766Z" />
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                         stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                              d="M18 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0ZM3 19.235v-.11a6.375 6.375 0 0 1 12.75 0v.109A12.318 12.318 0 0 1 9.374 21c-2.331 0-4.512-.645-6.374-1.766Z"/>
                     </svg>
                     <span>招募夥伴</span>
                 </li>
                 <li class="store for-pc">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                         stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                              d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"/>
                     </svg>
 
                     <span>門市查詢</span>
@@ -161,5 +224,85 @@
 
 </header>
 
+<!-- ----------------------------------- 內容 ----------------------------------- -->
+
+<form id="loginForm" action="SignIn.html" method="post" autocomplete="off">
+    <div class="container" id="content">
+        <div class="fields max1024">
+            <h1 class="region size1of1">登入或註冊星禮程會員</h1>
+        </div>
+        <div class="fields max1024 SignIn_style">
+
+            <div class="region size1of1">
+                <ol class="blocks section_blocks blocks-two-up">
+                    <li>
+                        <h2 style="margin-bottom:0;">我已是星禮程會員</h2>
+                        <div id="error-summary" style="display:none">
+                            <div class="big_errormsg">
+                                <div class="notice"></div>
+                                <p class="errormsg">
+                                </p>
+                                <div class="error_underline"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="must">帳號 Account(電子郵件地址Email Address)</label>
+                            <br>
+                            <input type="text" style="display:none" tabindex="1">
+                            <input value="" type="text" maxlength="50" size="20" name="form.loginId"
+                                   class="riTextBox riEnabled" tabindex="2" required="">
+                            <br>
+                        </div>
+                        <br>
+                        <div>
+                            <label class="must">密碼 Password</label>
+                            <br>
+                            <input type="password" maxlength="12" size="20" name="form.passw0rd"
+                                   class="riTextBox riEnabled" tabindex="3" required="">
+                            <br>
+                        </div>
+                        <br>
+
+                        <br>
+                        <a class="btn-style" id="loginBtn" tabindex="4">登入 Sign In</a>
+                        <br>
+                        <br>
+
+                        <!--  <p><a href="ForgotPassword.html">忘記密碼</a> 或 <a href="ResendVerificationEmail.html"><font size="4">尚未完成認證請按這裡</font></a></p> -->
+
+                        <p style="line-height:2.5;">
+                            <a href="ForgotPassword.html" tabindex="5">忘記密碼，請點擊此處 Forgot your password?</a><br>
+                            <a href="ResendVerificationEmail.html" tabindex="6">尚未完成認證，請點擊此處 Resend
+                                verification</a>
+                        </p>
+                    </li>
+
+                    <li>
+                        <div class="bg_light-green">
+                            <h2 class="heading_landing">新會員註冊</h2>
+                            <p>成為星禮程會員，消費累積星星，星級回饋隨心享，讓每次美好消費體驗，變成您的專屬回饋</p>
+                            <a href="https://www.starbucks.com.tw/rewards/catalog.jspx" target="_blank">什麼是星禮程？
+                                About Starbucks<sup>®</sup> Rewards</a>
+                            <div class="btn_group"><a class="btn-style border" href="RegisterTerms.html"
+                                                      id="registerBtn">立即註冊 Join Now</a></div>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </div>
+
+        <ul id="breadcrumb">
+            <li>
+                <a href="">隨行卡專區</a>
+                <span class="dot">.</span>
+            </li>
+            <li>
+                <a class="disablelink">登入 Sign In</a>
+            </li>
+            <li></li>
+        </ul>
+
+    </div>
+    <!-- ----------------------------------- 內容結束 ----------------------------------- -->
 </body>
 </html>
