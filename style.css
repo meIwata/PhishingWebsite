@@ -293,9 +293,6 @@
 
     #content .blocks-two-up {
         flex-direction: row;
-    }
-
-    #content .blocks-two-up {
         display: flex;
         gap: 48px;
     }
@@ -386,11 +383,6 @@
         margin-left: 2px;
     }
 
-    ::before,
-    ::after {
-        font-family: "Noto Sans TC", Meiryo, 微軟正黑體, "Microsoft JhengHei", sans-serif, FontAwesome;
-    }
-
     label {
         cursor: default;
     }
@@ -441,6 +433,11 @@
     #content a:link {
         -webkit-tap-highlight-color: rgb(52, 158, 219);
     }
+
+    #content .about-rewards-link:hover {
+    background-color: #2a8a15;
+    color: #fff;
+}
 
     #content a:link,
     #content a:visited {
@@ -497,6 +494,7 @@
         box-shadow: 0 0 0 1px #315048;
         color: #315048;
     }
+
 
     #breadcrumb {
         clear: both;
