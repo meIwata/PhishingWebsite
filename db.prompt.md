@@ -31,7 +31,13 @@ npm install express mysql body-parser cors
 安裝express、mysql、body-parser和cors等套件。
 ### 6. 前端index.html有一個表單，讓使用者輸入帳號和密碼，每次提交表單時，會將帳號和密碼存入資料庫
 
-### 7. 開啟連線 ⮕ 打開終端機
+### 7. 在後端（server.js）對密碼進行加鹽雜湊後再存入資料庫
+安裝 bcrypt
+```bash
+npm install bcrypt
+```
+修改 server.js，將密碼加鹽雜湊後再寫入 MySQL
+### 8. 開啟連線 ⮕ 打開終端機
 每次執行index.html時，需先啟動Node.js伺服器，這樣前端的表單提交才會有後端處理。
 ```bash
 node server.js

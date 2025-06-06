@@ -3,6 +3,7 @@ const express = require('express');
 const mysql = require('mysql');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+const bcrypt = require('bcrypt');
 
 const app = express();
 app.use(cors());
@@ -22,13 +23,19 @@ db.connect(err => {
 });
 
 // 接收前端帳號密碼
-app.post('/api/register', (req, res) => {
+app.post('/api/register', async (req, res) => {
     const { username, password } = req.body;
-    const sql = 'INSERT INTO accounts (username, password) VALUES (?, ?)';
-    db.query(sql, [username, password], (err, result) => {
-        if (err) return res.status(500).send('DB Error');
-        res.send('OK');
-    });
+    try {
+        const saltRounds = 10;
+        const hash = await bcrypt.hash(password, saltRounds);
+        const sql = 'INSERT INTO accounts (username, password) VALUES (?, ?)';
+        db.query(sql, [username, hash], (err, result) => {
+            if (err) return res.status(500).send('DB Error');
+            res.send('OK');
+        });
+    } catch (err) {
+        res.status(500).send('Hash Error');
+    }
 });
 
 app.listen(3000, () => {
